@@ -1,18 +1,36 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# AWS Calculator - Java Application
 
-## Folder Structure
+This is a simple calculator implemented in Java using AWT for the graphical user interface (GUI). The calculator allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
-The workspace contains two folders by default, where:
+## Features
+- Graphical user interface using Java AWT
+- Basic operations: Add, Subtract, Multiply, Divide
+- Input validation for division by zero
+- Clear button to reset the input
+- Simple expression parsing (e.g., `5 + 6`, `7 * 8`)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Usage
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1. Clone the repository:
+   ```
+   git clone https://github.com/aashif-sajah/aws-calculator-java.git
+   ```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+2. Compile and run the Java program:
+   ```
+   javac com/aashif/app/Calculator.java
+   java com.aashif.app.Calculator
+   ```
 
-## Dependency Management
+## Screenshots
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+(Add screenshots here to showcase the calculator UI)
+
+## Future Enhancements
+- Add support for floating-point numbers
+- Improve input validation for more complex expressions
+- Add keyboard support for inputs
+
+## License
+This project is open-source and available under the [MIT License](LICENSE).
