@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Calculator extends Frame implements ActionListener{
-    TextField answer,test;
+    TextField answer;
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0,plus,minus,multi,devide,clear,equal;
     Calculator (){
         
@@ -179,6 +179,31 @@ public class Calculator extends Frame implements ActionListener{
             answer.setText(data);
         }
 
+        if (e.getSource() == devide){
+            String data = answer.getText();
+            data += "/";
+            answer.setText(data);
+        }
+
+        if (e.getSource() == plus){
+            String data = answer.getText();
+            data += "+";
+            answer.setText(data);
+        }
+
+        if (e.getSource() == minus){
+            String data = answer.getText();
+            data += "-";
+            answer.setText(data);
+        }
+
+        if (e.getSource() == multi){
+            String data = answer.getText();
+            data += "*";
+            answer.setText(data);
+        }
+
+
         // Check Clear
 
         if (e.getSource() == clear){
@@ -187,7 +212,66 @@ public class Calculator extends Frame implements ActionListener{
             
         }
 
+        if (e.getSource() == equal){
+            String data = answer.getText();
+            Double result = evaluateMath(data);
+            answer.setText(String.valueOf(result));
+        }
+    }
 
+    private Double evaluateMath(String data){
+        Double result = null;
+        String data1 = "";
+        String data2 = "";
+        char op = '\0';
+        int i;
+
+        for (i = 0; i < data.length();i++){
+            if (Character.isDigit(data.charAt(i))){
+                data1+=data.charAt(i);
+            } else{
+                op = data.charAt(i);
+                break;
+            }
+        }
+
+        data2 = data.substring(i+1);
+        int num1 = Integer.parseInt(data1);
+        int num2 = Integer.parseInt(data2);
+        
+
+        switch (op) {
+            case '+':
+                result = (double )(num1 + num2);
+                break;
+            
+            case '-':
+                result = (double )(num1 - num2);
+                break;
+            
+            case '*':
+                result = (double )(num1 * num2);
+                break;
+            
+            case '/':
+                try {
+                    if (num2 == 0){
+                        throw new ArithmeticException("Cannot Devide by Zero");
+                    }
+                    result = (double )(num1 / num2);
+                } catch (ArithmeticException e) {
+                    System.out.println(e.getMessage());
+                }
+                
+                break;
+            default:
+               System.out.println("Invalid Oparation");
+        }
+
+        
+        return result;
+        
+        
     }
 
 
