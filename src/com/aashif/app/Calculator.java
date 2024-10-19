@@ -107,6 +107,9 @@ public class Calculator extends Frame implements ActionListener{
         add(clear);
         add(equal);
 
+        // Apply colors
+        applyColors();
+
 
         setSize(340,410);
         setLayout(null);
@@ -273,6 +276,66 @@ public class Calculator extends Frame implements ActionListener{
         
         
     }
+
+     // Method to apply colors to the calculator components
+     private void applyColors() {
+        // Background color for buttons
+        Color buttonColor = Color.LIGHT_GRAY;
+        Color operatorColor = Color.ORANGE;
+        Color clearColor = Color.RED;
+        Color backgroundColor = Color.DARK_GRAY;
+        Color textColor = Color.WHITE;
+
+        // Apply background and foreground colors to the frame and buttons
+        setBackground(backgroundColor);
+
+        // Answer field
+        answer.setBackground(Color.WHITE);
+        answer.setForeground(Color.BLACK);
+
+        // Number buttons
+        btn0.setBackground(buttonColor);
+        btn1.setBackground(buttonColor);
+        btn2.setBackground(buttonColor);
+        btn3.setBackground(buttonColor);
+        btn4.setBackground(buttonColor);
+        btn5.setBackground(buttonColor);
+        btn6.setBackground(buttonColor);
+        btn7.setBackground(buttonColor);
+        btn8.setBackground(buttonColor);
+        btn9.setBackground(buttonColor);
+
+        // Operator buttons
+        plus.setBackground(operatorColor);
+        minus.setBackground(operatorColor);
+        multi.setBackground(operatorColor);
+        devide.setBackground(operatorColor);
+        equal.setBackground(operatorColor);
+
+        // Clear button
+        clear.setBackground(clearColor);
+
+        // Foreground color for all buttons (text color)
+        btn0.setForeground(textColor);
+        btn1.setForeground(textColor);
+        btn2.setForeground(textColor);
+        btn3.setForeground(textColor);
+        btn4.setForeground(textColor);
+        btn5.setForeground(textColor);
+        btn6.setForeground(textColor);
+        btn7.setForeground(textColor);
+        btn8.setForeground(textColor);
+        btn9.setForeground(textColor);
+
+        plus.setForeground(textColor);
+        minus.setForeground(textColor);
+        multi.setForeground(textColor);
+        devide.setForeground(textColor);
+        equal.setForeground(textColor);
+
+        clear.setForeground(textColor);
+    }
+
 
 
 
