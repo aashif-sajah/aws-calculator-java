@@ -4,86 +4,86 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Calculator extends Frame implements ActionListener{
-    TextField answer;
+    TextField answer,test;
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0,plus,minus,multi,devide,clear,equal;
-
     Calculator (){
-        answer = new TextField("Nigga!");
-        answer.setBounds(0,0,300,75);
-        answer.setText("Aashif");
+        
+        answer = new TextField("0");
+        answer.setBounds(10,30,320,60);
 
+    
         // last row
 
         btn0 = new Button("0");
-        btn0.setBounds(75,335,150,65);
+        btn0.setBounds(90,330,160,60);
         btn0.addActionListener(this);
 
         equal = new Button("=");
-        equal.setBounds(225,335,75,65);
+        equal.setBounds(250,330,80,60);
         equal.addActionListener(this);
 
         //4th row
 
         btn1 = new Button("1");
-        btn1.setBounds(0,270,75,65);
+        btn1.setBounds(10,270,80,60);
         btn1.addActionListener(this);
 
         btn2 = new Button("2");
-        btn2.setBounds(75,270,75,65);
+        btn2.setBounds(90,270,80,60);
         btn2.addActionListener(this);
 
         btn3 = new Button("3");
-        btn3.setBounds(150,270,75,65);
+        btn3.setBounds(170,270,80,60);
         btn3.addActionListener(this);
 
         plus = new Button("+");
-        plus.setBounds(225,270,75,65);
+        plus.setBounds(250,270,80,60);
         plus.addActionListener(this);
 
         // 3rd row
 
         btn4 = new Button("4");
-        btn4.setBounds(0,205,75,65);
+        btn4.setBounds(10,210,80,60);
         btn4.addActionListener(this);
 
         btn5 = new Button("5");
-        btn5.setBounds(75,205,75,65);
+        btn5.setBounds(90,210,80,60);
         btn5.addActionListener(this);
 
         btn6 = new Button("6");
-        btn6.setBounds(150,205,75,65);
+        btn6.setBounds(170,210,80,60);
         btn6.addActionListener(this);
 
         minus = new Button("-");
-        minus.setBounds(225,205,75,65);
+        minus.setBounds(250,210,80,60);
         minus.addActionListener(this);
 
         // 2nd row
 
         btn7 = new Button("7");
-        btn7.setBounds(0,140,75,65);
+        btn7.setBounds(10,150,80,60);
         btn7.addActionListener(this);
 
         btn8 = new Button("8");
-        btn8.setBounds(75,140,75,65);
+        btn8.setBounds(90,150,80,60);
         btn8.addActionListener(this);
 
         btn9 = new Button("9");
-        btn9.setBounds(150,140,75,65);
+        btn9.setBounds(170,150,80,60);
         btn9.addActionListener(this);
 
         multi = new Button("X");
-        multi.setBounds(225,140,75,65);
+        multi.setBounds(250,150,80,60);
         multi.addActionListener(this);
 
         // 1st row
 
         clear = new Button("Clear");
-        clear.setBounds(0, 75, 225, 65);
+        clear.setBounds(10, 90, 250, 60);
         clear.addActionListener(this);
 
         devide = new Button("/");
-        devide.setBounds(225,75,75,65);
+        devide.setBounds(250,90,80,60);
         devide.addActionListener(this);
         
 
@@ -108,68 +108,75 @@ public class Calculator extends Frame implements ActionListener{
         add(equal);
 
 
-        setSize(300,400);
+        setSize(340,410);
         setLayout(null);
         setTitle("calc");
         setVisible(true);
 
     }
 
-    public void actionPerfomed(ActionEvent e){
-        if (e.getSource() == btn0){
-            String data = answer.getText();
-            data += "0";
-        }
+    @Override 
+    public void actionPerformed(ActionEvent e){
 
         if (e.getSource() == btn0){
             String data = answer.getText();
             data += "0";
+            answer.setText(data);
         }
 
         if (e.getSource() == btn1){
             String data = answer.getText();
             data += "1";
+            answer.setText(data);
         }
 
 
         if (e.getSource() == btn2){
             String data = answer.getText();
             data += "2";
+            answer.setText(data);
         }
 
         if (e.getSource() == btn3){
             String data = answer.getText();
             data += "3";
+            answer.setText(data);
         }
 
         if (e.getSource() == btn4){
             String data = answer.getText();
             data += "4";
+            answer.setText(data);
         }
 
         if (e.getSource() == btn5){
             String data = answer.getText();
             data += "5";
+            answer.setText(data);
         }
 
         if (e.getSource() == btn6){
             String data = answer.getText();
             data += "6";
+            answer.setText(data);
         }
 
         if (e.getSource() == btn7){
             String data = answer.getText();
             data += "7";
+            answer.setText(data);
         }
 
         if (e.getSource() == btn8){
             String data = answer.getText();
             data += "8";
+            answer.setText(data);
         }
 
         if (e.getSource() == btn9){
             String data = answer.getText();
             data += "9";
+            answer.setText(data);
         }
 
         // Check Clear
